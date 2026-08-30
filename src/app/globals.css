@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   /* Cal.com-inspired light palette, mapped onto the original token names
@@ -39,17 +38,18 @@
 
 * { box-sizing: border-box; }
 
-html { background: var(--navy-950); scroll-behavior: smooth; }
+html { background: var(--navy-950); scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   min-height: 100vh;
   margin: 0;
   background: #ffffff;
   color: var(--ink);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: "cv11", "ss01";
+  overflow-x: hidden;
 }
 
 button, input { font: inherit; }
@@ -59,9 +59,9 @@ a { color: inherit; text-decoration: none; }
 
 ::selection { background: rgba(17, 17, 17, 0.12); color: var(--ink); }
 
-::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 999px; border: 2px solid #ffffff; }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted-2); }
 html { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
 
@@ -291,7 +291,7 @@ button:focus-visible, a:focus-visible { outline-offset: 3px; }
 .setup-step p { margin: 1px 0 0; color: var(--cal-body); font-size: 12px; line-height: 1.48; }
 .variable-list { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
 .variable-list p { width: 100%; margin: 0 0 2px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.variable-list code { padding: 5px 6px; color: var(--ink); border: 1px solid var(--line); border-radius: 5px; background: var(--cal-surface-soft); font-size: 10px; font-family: "JetBrains Mono", ui-monospace, monospace; }
+.variable-list code { padding: 5px 6px; color: var(--ink); border: 1px solid var(--line); border-radius: 5px; background: var(--cal-surface-soft); font-size: 10px; font-family: var(--font-jetbrains-mono), ui-monospace, monospace; }
 .security-note { display: flex; align-items: flex-start; gap: 7px; margin-top: 20px; padding: 10px 0 0; color: var(--muted); border-top: 1px solid var(--line); font-size: 11px; line-height: 1.42; }
 .security-note svg { flex: 0 0 auto; color: var(--muted); }
 .unavailable-card { border-color: rgba(245,158,11,.3); }
