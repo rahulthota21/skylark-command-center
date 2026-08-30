@@ -2,7 +2,7 @@
 
 **An evidence-backed, read-only monday.com Business Intelligence agent for founder and executive questions.**
 
-> **Live demo:** Add deployed Vercel URL here before submission.
+> **Live demo:** https://skylark-command-center.vercel.app/
 
 Skylark Command Center connects dynamically to a Sales Pipeline board and a Project Execution / Work Orders board in monday.com. It turns natural-language questions into defensible business analysis, while surfacing assumptions, source evidence, data quality, and uncertainty.
 
