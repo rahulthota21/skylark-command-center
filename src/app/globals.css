@@ -309,3 +309,54 @@ a { color: inherit; text-decoration: none; }
   .footer { align-items: flex-start; flex-direction: column; }
   .setup-card { width: calc(100% - 30px); margin: 48px auto; padding: 22px; }
 }
+
+/* ============================================================
+   UI POLISH PASS — additive only, safe to delete this block
+   to fully revert to the original styling.
+   ============================================================ */
+
+/* Give cards more breathing room instead of a dense grid */
+.metric-card { padding: 22px; }
+.answer-panel { padding: 28px; }
+.ask-panel { padding: 26px; }
+.answer-list { padding: 17px; }
+.details-content { padding: 0 16px 18px; }
+.chart-panel { padding: 24px 24px 16px; }
+
+/* Make the big hero numbers the clear visual anchor of each card */
+.metric-card strong {
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, #cfe8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.metric-attention strong { background: linear-gradient(135deg, #fff2c9, #ffdf8a); -webkit-background-clip: text; background-clip: text; }
+.metric-muted strong { background: none; -webkit-text-fill-color: unset; color: #bdc8d5; }
+
+/* Reduce bullet density — more line spacing, calmer bullets */
+.answer-list li,
+.details-content li,
+.brief-grid li,
+.quality-warnings li {
+  margin-top: 11px;
+  line-height: 1.68;
+}
+
+/* Slightly stronger card separation without changing the palette */
+.metric-card,
+.answer-panel,
+.ask-panel,
+.chart-panel,
+.readiness-panel,
+.method-card,
+.leadership-panel,
+.answer-list {
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+/* Soften the answer-columns grid on medium screens so text isn't cramped */
+@media (max-width: 1180px) {
+  .answer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
